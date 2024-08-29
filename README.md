@@ -18,10 +18,14 @@ You need to run this application to test the OpenAuth widget. This application i
     ```
 4. Refer to the [Environment Variables](#environment-variables) section to configure the environment variables.
 
+
 5. To start the project, run:
     ```sh
     npm run dev
     ```
+
+6. Configure `Redirect URL` in [Stytch dashboard](https://stytch.com/dashboard) to your running app URL like `http://localhost:5173/auth?state={}`
+
 
 ## Environment Variables
 
@@ -31,19 +35,18 @@ To configure the environment variables for the project, follow these steps:
     ```sh
     cp .env.example .env
     ```
-    This command creates a new `.env` file in the project root by copying the provided [`.env.example`](command:_github.copilot.openRelativePath?%5B%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2FUsers%2Fvrajdesai%2FDevelopment%2FAarc%2Fopen-auth-redirect%2F.env.example%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%5D "/Users/vrajdesai/Development/Aarc/open-auth-redirect/.env.example") file.
+    This command creates a new `.env` file in the project root by copying the provided `.env.example` file.
 
 2. **Edit the `.env` File**:
     Open the newly created `.env` file in your preferred text editor. Replace the placeholder values with your actual configuration values. Get `VITE_AARC_AUTHENTICATE_URL` and `VITE_AARC_STAGING_AUTHENTICATE_URL` by running [Open Auth Backend](https://github.com/aarc-xyz/service-open-auth-backend). `VITE_TG_BOT_NAME` is used for authenticating with Telegram.
     ```env
-    VITE_AARC_AUTHENTICATE_URL=
-    VITE_AARC_STAGING_AUTHENTICATE_URL=
-    VITE_TG_BOT_NAME=
+    VITE_AARC_AUTHENTICATE_URL="YOUR_BACKEND_PROD_URL/authenticate/"
+    VITE_AARC_STAGING_AUTHENTICATE_URL="YOUR_BACKEND_STAGING_URL/authenticate/"
+    VITE_TG_BOT_NAME="YOUR_TELEGRAM_BOT_NAME"
     ```
 
 3. **Save the Changes**:
-    After updating the values, save the `.env` file. These environment variables will now be loaded when you start the application.
-
+    After updating the values, save the `.env` file. If your project is already running, you may need to restart it for the changes to take effect.
 
 ## Usage
 
