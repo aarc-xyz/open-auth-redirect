@@ -29,7 +29,7 @@ function App() {
     state = JSON.parse(state)
   }
 
-  const url = state.env == 'prod' ? import.meta.env.VITE_AARC_AUTHENTICATE_URL : import.meta.env.VITE_AARC_STAGING_AUTHENTICATE_URL
+  const url = state.env == 'prod' ? import.meta.env.VITE_AUTHENTICATE_URL : import.meta.env.VITE_STAGING_AUTHENTICATE_URL
 
   useEffect(() => {
 
@@ -62,9 +62,7 @@ function App() {
         }
         axios.post(url, body, {
           headers: {
-            'x-api-key': state.aarcApiKey,
             "Request-Source": state?.requestSource,
-
           }
 
         }).then(() => {
@@ -96,7 +94,6 @@ function App() {
       }
       axios.post(url, body, {
         headers: {
-          'x-api-key': state.aarcApiKey,
           "Request-Source": state?.requestSource,
         }
 
@@ -127,7 +124,6 @@ function App() {
 
         axios.post(url, body, {
           headers: {
-            'x-api-key': state.aarcApiKey,
             "Request-Source": state?.requestSource,
 
           }
