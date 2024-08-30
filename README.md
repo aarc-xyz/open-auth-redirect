@@ -38,10 +38,10 @@ To configure the environment variables for the project, follow these steps:
     This command creates a new `.env` file in the project root by copying the provided `.env.example` file.
 
 2. **Edit the `.env` File**:
-    Open the newly created `.env` file in your preferred text editor. Replace the placeholder values with your actual configuration values. Get `VITE_AARC_AUTHENTICATE_URL` and `VITE_AARC_STAGING_AUTHENTICATE_URL` by running [Open Auth Backend](https://github.com/aarc-xyz/service-open-auth-backend). `VITE_TG_BOT_NAME` is used for authenticating with Telegram.
+    Open the newly created `.env` file in your preferred text editor. Replace the placeholder values with your actual configuration values. Get `VITE_AUTHENTICATE_URL` and `VITE_STAGING_AUTHENTICATE_URL` by running [Open Auth Backend](https://github.com/aarc-xyz/service-open-auth-backend). `VITE_TG_BOT_NAME` is used for authenticating with Telegram.
     ```env
-    VITE_AARC_AUTHENTICATE_URL="YOUR_BACKEND_PROD_URL/authenticate/"
-    VITE_AARC_STAGING_AUTHENTICATE_URL="YOUR_BACKEND_STAGING_URL/authenticate/"
+    VITE_AUTHENTICATE_URL="YOUR_BACKEND_PROD_URL/authenticate/"
+    VITE_STAGING_AUTHENTICATE_URL="YOUR_BACKEND_STAGING_URL/authenticate/"
     VITE_TG_BOT_NAME="YOUR_TELEGRAM_BOT_NAME"
     ```
 
